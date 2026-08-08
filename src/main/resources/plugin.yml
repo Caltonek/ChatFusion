@@ -6,3 +6,93 @@ api-version: '26.2'
 load: STARTUP
 
 authors: [ Caltonek ]
+
+chatfusion.chat.*:
+  description: Access to all chat features
+  default: op
+  children:
+    chatfusion.chat.color.*: true
+    chatfusion.chat.format.*: true
+    chatfusion.chat.advanced.*: true
+
+chatfusion.chat.color.*:
+  description: Access to all color types
+  children:
+    chatfusion.chat.color.legacy: true
+    chatfusion.chat.color.rgb.*: true
+
+chatfusion.chat.color.legacy:
+  description: Access to legacy colors (&0-9, &a-f)
+  default: op
+
+chatfusion.chat.color.rgb.*:
+  description: Access to all RGB colors and effects
+  children:
+    chatfusion.chat.color.rgb.hex: true
+    chatfusion.chat.color.rgb.gradient: true
+    chatfusion.chat.color.rgb.rainbow: true
+    chatfusion.chat.color.rgb.transition: true
+
+chatfusion.chat.color.rgb.hex:
+  description: Access to HEX colors (&#rrggbb, {#rrggbb}, <#rrggbb>)
+
+chatfusion.chat.color.rgb.gradient:
+  description: Access to color gradients
+
+chatfusion.chat.color.rgb.rainbow:
+  description: Access to rainbow effects
+
+chatfusion.chat.color.rgb.transition:
+  description: Access to color transitions
+
+chatfusion.chat.format.*:
+  description: Access to all text styles
+  children:
+    chatfusion.chat.format.bold: true
+    chatfusion.chat.format.italic: true
+    chatfusion.chat.format.underline: true
+    chatfusion.chat.format.strikethrough: true
+    chatfusion.chat.format.obfuscated: true
+    chatfusion.chat.format.reset: true
+
+chatfusion.chat.format.bold:
+  description: Access to bold text (&l)
+
+chatfusion.chat.format.italic:
+  description: Access to italic text (&o)
+
+chatfusion.chat.format.underline:
+  description: Access to underlined text (&n)
+
+chatfusion.chat.format.strikethrough:
+  description: Access to strikethrough text (&m)
+
+chatfusion.chat.format.obfuscated:
+  description: Access to obfuscated text (&k)
+
+chatfusion.chat.format.reset:
+  description: Access to formatting reset (&r)
+
+chatfusion.chat.advanced.*:
+  description: Access to advanced interactive tags
+  children:
+    chatfusion.chat.advanced.click: true
+    chatfusion.chat.advanced.hover: true
+    chatfusion.chat.advanced.keybind: true
+    chatfusion.chat.advanced.translatable: true
+    chatfusion.chat.advanced.font: true
+
+chatfusion.chat.advanced.click:
+  description: Access to click tags
+
+chatfusion.chat.advanced.hover:
+  description: Access to hover tags
+
+chatfusion.chat.advanced.keybind:
+  description: Access to keybind tags
+
+chatfusion.chat.advanced.translatable:
+  description: Access to translatable tags
+
+chatfusion.chat.advanced.font:
+  description: Access to font tags

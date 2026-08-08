@@ -1,12 +1,17 @@
 package pl.caltonek.chatFusion;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import pl.caltonek.chatFusion.config.ConfigManager;
+import pl.caltonek.chatFusion.listener.ChatListener;
 
 public final class ChatFusion extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        ConfigManager configManager = new ConfigManager(this);
+        configManager.loadConfigs();
+
+        getServer().getPluginManager().registerEvents(new ChatListener(configManager), this);
     }
 
     @Override

@@ -1,0 +1,19 @@
+formatting:
+  enabled: true
+  no-permission-mode: "STRIP" # "STRIP" sends a clean message without formatting if the player doesn't have permission, "RAW" sends the full message as plain text
+  allow-legacy-colors: true    # &0-9, &a-f
+  allow-hex-colors: true       # &#rrggbb, {#rrggbb}, <#rrggbb>
+  allow-gradients: true        # &#rrggbb>tekst&#rrggbb<
+  allow-bold: true             # &l
+  allow-italic: true           # &o
+  allow-underline: true        # &n
+  allow-strikethrough: true    # &m
+  allow-obfuscated: true       # &k
+  allow-reset: true           # &r
+  allow-click-events: false    # <click:run_command:'/op'>, <click:open_url:...>
+  allow-hover-events: false    # <hover:show_text:'Tekst'>
+  allow-keybinds: false        # <key:key.jump>
+  allow-translatable: false    # <lang:item.minecraft.diamond>
+  allow-font: false            # <font:minecraft:alt>
+  allow-rainbow: true          # <rainbow>, {#rainbow}
+  allow-transition: true       # <transition:#ff0000:#00ff00:0.5>
