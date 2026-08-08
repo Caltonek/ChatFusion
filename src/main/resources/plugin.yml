@@ -1,0 +1,8 @@
+name: ChatFusion
+version: '${version}'
+
+main: pl.caltonek.chatFusion.ChatFusion
+api-version: '26.2'
+load: STARTUP
+
+authors: [ Caltonek ]
